@@ -13,6 +13,7 @@ await page.locator("#userPassword").fill("Saicharani@123");
 await page.locator("#login").click();
 await page.waitForLoadState('networkidle'); 
 //if waitforloadstate is not working then use below code
+//waitFor and WaitForLoadState will work similar 
 await page.locator(".card-body b").first().waitFor();
 const titles = await page.locator(".card-body b").allTextContents();
 console.log(titles);
